@@ -23,15 +23,13 @@ Route::group(['middleware' => 'auth'], function () {
         Route::get("add",[CategoryController::class, 'CategoryAdd'])->name("category.add");
         Route::post("store",[CategoryController::class, 'CategoryStore'])->name("category.store");
     });
-    
+
     Route::prefix("post")->group(function () {
         Route::get('/show', [PostController::class, 'show']);
     });
 
-});
+    Route::prefix("phone")->group(function () {
+        Route::get("show",[PhoneController::class, "show"]);
+    });
 
-Route::group(['middleware' => 'auth'], function () {
-   Route::prefix("phone")->group(function () {
-       Route::get("show",[PhoneController::class, "show"]);
-   });
 });
