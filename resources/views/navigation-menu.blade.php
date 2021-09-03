@@ -16,11 +16,6 @@
                         {{ __('Dashboard') }}
                     </x-jet-nav-link>
                 </div>
-
-                <div class="mt-5 ml-3">
-                 <a href="{{ route("show.category") }}">Category</a>
-                </div>
-
             </div>
 
             <div class="hidden sm:flex sm:items-center sm:ml-6">
